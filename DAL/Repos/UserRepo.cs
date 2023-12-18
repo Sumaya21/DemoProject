@@ -11,52 +11,27 @@ namespace DAL.Repos
 {
     internal class UserRepo : Repo, IRepo<User, string, User>
     {
-      
-
         public User Create(User obj)
         {
-            db.Users.Add(obj);
-            if (db.SaveChanges() > 0) return obj;
-            return null;
+            throw new NotImplementedException();
         }
 
         public bool Delete(string id)
         {
-            var ex = Read(id);
-            db.Users.Remove(ex);
-            return db.SaveChanges() > 0;
+            throw new NotImplementedException();
         }
 
-        public List<User> Read()
+        public List<Type> Read()
         {
-            return db.Users.ToList();
+            throw new NotImplementedException();
         }
 
-        public User Read(string id)
+        public Type Read(string id)
         {
-            return db.Users.Find(id);
-        }
-
-        public User Update(User obj)
-        {
-            var ex = Read(obj.Uname);
-            db.Entry(ex).CurrentValues.SetValues(obj);
-            if (db.SaveChanges() > 0) return obj;
-            return null;
-
+            throw new NotImplementedException();
         }
 
         public User Update(Type obj)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<Type> IRepo<User, string, User>.Read()
-        {
-            throw new NotImplementedException();
-        }
-
-        Type IRepo<User, string, User>.Read(string id)
         {
             throw new NotImplementedException();
         }
