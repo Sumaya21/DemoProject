@@ -11,11 +11,12 @@ namespace DAL.Repos
     {
         internal PostContext db;
         internal Repo()
-        {
 
-            db = new PostContext();
+        { 
+        
+        db = new PostContext();
+        
         }
-
 
 
     }

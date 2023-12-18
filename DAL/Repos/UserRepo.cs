@@ -1,5 +1,4 @@
 ﻿using DAL.Interface;
-
 using DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -21,17 +20,17 @@ namespace DAL.Repos
             throw new NotImplementedException();
         }
 
-        public List<Type> Read()
+        public List<User> Read()
         {
             throw new NotImplementedException();
         }
 
-        public Type Read(string id)
+        public User Read(string id)
         {
             throw new NotImplementedException();
         }
 
-        public User Update(Type obj)
+        public User Update(User obj)
         {
             throw new NotImplementedException();
         }
