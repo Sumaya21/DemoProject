@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DataAccessFectory.cs" />
     <Compile Include="Interface\IRepo.cs" />
     <Compile Include="Migrations\202312181754237_intiDB.cs" />
     <Compile Include="Migrations\202312181754237_intiDB.designer.cs">
@@ -63,6 +63,8 @@
     <Compile Include="Models\PostContext.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\CommentRepo.cs" />
+    <Compile Include="Repos\PostRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
     <Compile Include="Repos\UserRepo.cs" />
   </ItemGroup>
