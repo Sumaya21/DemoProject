@@ -27,7 +27,47 @@ namespace DemoProject.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("api/posts/{id}")]
 
+        public HttpResponseMessage Post(int id)
+        {
+
+            try
+            {
+                var data = PostService.Get(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Message = ex.Message });
+
+            }
+
+
+
+        }
+
+
+        [HttpGet]
+        [Route("api/posts/{id}/Comments")]
+
+        public HttpResponseMessage PostComments(int id)
+        {
+            try
+            {
+                var data = PostService.GetwithComments(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Message = ex.Message });
+
+            }
+
+        }
 
     }
 }

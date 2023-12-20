@@ -22,10 +22,10 @@ namespace DAL.Models
 
         public virtual User User { get; set;}
 
-        public virtual ICollection<Comment> Posts { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
         public Post()
         {
-            Posts = new List<Comment>();
+            Comments = new List<Comment>();
 
 
         }

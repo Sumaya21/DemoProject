@@ -48,7 +48,7 @@ namespace BLL.Services
             var data = DataAccessFectory.PostData().Read(id);
             var cfg = new MapperConfiguration(c =>
             {
-                c.CreateMap<Post, PostDTO>();
+                c.CreateMap<Post, PostCommentDTO>();
                 c.CreateMap<Comment, CommentDTO>();
 
 
