@@ -10,25 +10,25 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-   public class PostService
+    public class PostService
     {
         public static List<PostDTO> Get()
 
         {
             var data = DataAccessFectory.PostData().Read();
-            var cfg = new MapperConfiguration(c=>
+            var cfg = new MapperConfiguration(c =>
             {
                 c.CreateMap<Post, PostDTO>();
 
             }
-            
+
             );
 
             var mapper = new Mapper(cfg);
             var mapped = mapper.Map<List<PostDTO>>(data);
             return mapped;
         }
-          public static PostDTO Get(int id)
+        public static PostDTO Get(int id)
         {
             var data = DataAccessFectory.PostData().Read(id);
             var cfg = new MapperConfiguration(c =>
@@ -36,11 +36,30 @@ namespace BLL.Services
 
                 c.CreateMap<Post, PostDTO>();
             });
-             
+
             var mapper = new Mapper(cfg);
             var mapped = mapper.Map<PostDTO>(data);
             return mapped;
 
         }
+
+        public static PostCommentDTO GetwithComments(int id)
+        {
+            var data = DataAccessFectory.PostData().Read(id);
+            var cfg = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Post, PostDTO>();
+                c.CreateMap<Comment, CommentDTO>();
+
+
+            });
+            var mapper = new Mapper(cfg);
+            var mapped = mapper.Map<PostCommentDTO>(data);
+            return mapped;
+
+
+        }
+
+
     }
 }

@@ -19,7 +19,7 @@ namespace DemoProject.Controllers
                 var data = PostService.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
-            catch ( Exception ex )
+            catch (Exception ex)
             {
 
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Message = ex.Message });
