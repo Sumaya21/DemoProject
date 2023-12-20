@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessFectory.cs" />
+    <Compile Include="Interface\IAuth.cs" />
     <Compile Include="Interface\IRepo.cs" />
     <Compile Include="Migrations\202312181754237_intiDB.cs" />
     <Compile Include="Migrations\202312181754237_intiDB.designer.cs">
